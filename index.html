@@ -16,21 +16,34 @@
     </div>
     <div class="container">
     <main class="row">
-        <aside class="col-3">
+        <aside class="col-4">
             <input type="search" id="searchInput" class="form-control-inline" placeholder="Type in a City">
             <button type="submit" id="searchBtn" class="btn btn-primary inline-btn">Get Weather</button>
+            <div class="" id="pastCities">
+                <ul id="pastCitiesList">
+
+                </ul>
+            </div>
         </aside>
-        <section style="border: solid black 3px; height: 250px"; class="col-8">
-            <h2 class="weather-location">The weather today in: <span id="weather-update"></span></h2>
+        <section style= "height: 250px"; class="col-8">
+            <h3 class="weather-location">Today in: <span id="weather-update"></span></h3>
             <div id="currWeatherContainer">
-                <!-- <h6><span id="description"></span></h6> -->
+                <div><span class="icon"></span></div>
                 <h6 >Temperature: <span id="tempId"></span></h6>
                 <h6>Humidity: <span id="humidId"></span></h6>
                 <h6>Wind Speed: <span id="windId"></span></h6>
                 <h6>UV Index: <span id="uvID"></span></h6>
             </div>
         </section>
+        <hr>
     </main>
+    <section class="row" id="five">
+        <div class="col-12">
+        <h4>Five Day Forecast</h4>
+            <div class="col-2"></div>
+            <div class="" id="fiveContainer"></div>
+        </div>
+
 </div>
     
 
@@ -39,6 +52,8 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 <!-- Main Script Doc -->
 <script src="assets/js/script.js"></script>
 </body>

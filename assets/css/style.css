@@ -1,3 +1,43 @@
+body {
+    color: white;
+    background-color:#333333;
+}
+hr {
+    color: white;
+}
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
 span {
     font-weight: bold;
+}
+
+.card {
+    border: white solid 2px;
+    height: 150px;
+    width:150px;
+    margin: 10px;
+    text-align: center;
+    background-color: #333333;
+}
+h6{
+    padding-top: 5px;
+}
+
+#fiveContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#five {
+    color: white;
+    padding: 20px;
+    background-color: #333333;
+}
+
+.col-8 {
+    padding: 15px;
 }
