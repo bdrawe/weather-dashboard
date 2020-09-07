@@ -104,7 +104,7 @@ var displayWeather =  function(data, cityName){
             if(response.ok){
                 response.json().then(function(data){
                     //uv index populate
-                    console.log(data);
+                    
                     
                     
                     var uvValue = data.current.uvi;
@@ -129,7 +129,7 @@ var displayWeather =  function(data, cityName){
                         //get humidity
                         var futureHumid = data.daily[i].humidity
                         // get icon
-                        console.log(data.daily[i].weather[0].icon);
+                       
                         var weatherIcon = data.daily[i].weather[0].icon;
                         var iconUrl = "http://openweathermap.org/img/wn/" + weatherIcon + ".png";
                         // $(".icon").html("<img src='" + iconUrl  + "'>");
