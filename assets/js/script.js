@@ -82,7 +82,7 @@ var displayWeather =  function(data, cityName){
     //grab all of the data for each item
     //ICON
     var weatherIcon = data.weather[0].icon;
-    var iconUrl = "http://openweathermap.org/img/w/" + weatherIcon + ".png";
+    var iconUrl = "https://openweathermap.org/img/w/" + weatherIcon + ".png";
     $(".icon").html("<img src='" + iconUrl  + "'>");
     //TEMP
     var weatherTemp = data.main.temp;
@@ -137,7 +137,7 @@ var displayWeather =  function(data, cityName){
                         // get icon
                        
                         var weatherIcon = data.daily[i].weather[0].icon;
-                        var iconUrl = "http://openweathermap.org/img/wn/" + weatherIcon + ".png";
+                        var iconUrl = "https://openweathermap.org/img/wn/" + weatherIcon + ".png";
                         // $(".icon").html("<img src='" + iconUrl  + "'>");
 
                         //create the main element
