@@ -15,8 +15,10 @@ var pastCitiesUL = document.getElementById("pastCitiesList");
 
 var searchFormHandler = function(){
     var cityName = searchEl.value.trim();
-    pastCities.push(cityName);
-    localStorage.setItem("pastCities",JSON.stringify(pastCities));
+    // pastCities.pop(cityName);
+    // var storedCity = localStorage.setItem("pastCities",cityName);
+    // pastCities.push(storedCity);
+    // console.log(pastCities);
   
     if (cityName) {
         getCurrentWeather(cityName)
@@ -32,22 +34,26 @@ var searchFormHandler = function(){
 }
 var displayPastCities =  function(cityName){
         
-        var savedCities = localStorage.getItem("pastCities")
-        savedCities = JSON.parse(savedCities);
+    // var savedCities = JSON.parse(localStorage.getItem(pastCities));
         
-        var pastBtn = document.createElement("p");
-        pastBtn.textContent = cityName;
-        pastBtn.setAttribute('onclick',"getCurrentWeather(pastCities[0])");
-        pastCityContainer.appendChild(pastBtn);
+        
+        // for(var i = 0; i< pastCities.length; i++) {
+            var pastBtn = document.createElement("p");
+            pastBtn.textContent = cityName;
+            // pastBtn.setAttribute('onclick',getCurrentWeather(savedCities));
+            pastCityContainer.appendChild(pastBtn);
+        
+    }
+        
         
 
       
-    }
+    
 
 
 var getCurrentWeather =  function(cityName){
   // format the github api url
-  var apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=7d0096a167ea1572df8a347cb4cb0104";
+  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=7d0096a167ea1572df8a347cb4cb0104";
 
   //make a request to the url
   fetch(apiUrl).then(function(response){
